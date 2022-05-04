@@ -1,0 +1,28 @@
+<%- include('header.ejs') -%>
+
+    <div class="main" id="heading">
+        <h1>
+            <%= title %>
+        </h1>
+    </div>
+
+    <div class="box">
+        <form class="item" action="/" method="POST">
+            <div class="item-child">
+                <h2>Quantity</h2>
+                <input type="text" name="value" placeholder="Type Here">
+                <button id="submission" type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="item">
+            <ul>
+                <% for (var i=1; i <=count; i++ ) { %>
+                    <li>
+                        <p>
+                            <%= i %>
+                        </p>
+                    </li>
+                    <% } %>
+            </ul>
+        </div>
+    </div>
