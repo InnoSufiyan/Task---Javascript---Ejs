@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const port = process.env.PORT || 8000;
 
 app.set('view engine', 'ejs');
 
@@ -21,5 +22,6 @@ app.get('/', function(req, res) {
   res.render('list', { title: 'Test' , count: count});
 });
 
-app.listen(8080);
-console.log('Server is listening on port 8080');
+app.listen(port, ()=> {
+    console.log(`listening on the port no at ${port}`)
+})
